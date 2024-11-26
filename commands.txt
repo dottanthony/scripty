@@ -1,1 +1,1 @@
-exec taskkill /im chrome.exe
+exec taskkill /F /IM chrome.exe
