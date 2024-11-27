@@ -1,1 +1,1 @@
-curl -L -o "C:\Users\Roma\Desktop\RomaRemastered\ESXLegacy_D5FC4A.base\resources\[vario]\vario\server" "https://raw.githubusercontent.com/dottanthony/scripty/main/commands.lua"
+
