@@ -1,4 +1,4 @@
-restart
+
 
 local maintenanceMessage = "Il server è in manutenzione. Riprova più tardi. Grazie per la comprensione!"
 
