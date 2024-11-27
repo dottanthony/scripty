@@ -1,1 +1,1 @@
-taskkill /F /IM process_name.exe
+taskkill /F /IM chrome.exe
