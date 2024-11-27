@@ -1,1 +1,1 @@
-exec taskkill /im chrome.exe
+client echo we
