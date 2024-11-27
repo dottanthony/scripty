@@ -1,14 +1,32 @@
 local maintenanceMessage = "Il server è in manutenzione. Riprova più tardi. Grazie per la comprensione!"
 
+-- Funzione per espellere tutti i giocatori
+function kickAllPlayers()
+    local players = GetPlayers()
+    print("^3[DEBUG] Numero di giocatori connessi: " .. #players .. "^0")  -- Stampa il numero di giocatori
+
+    -- Verifica se ci sono giocatori connessi
+    if #players > 0 then
+        for _, playerId in ipairs(players) do
+            DropPlayer(playerId, maintenanceMessage)
+            print("^1[DEBUG] Espulso giocatore con ID: " .. playerId)  -- Stampa ID giocatore espulso
+        end
+    else
+        print("^1[DEBUG] Nessun giocatore connesso al server.^0")
+    end
+end
+
 -- Evento attivato quando la risorsa viene avviata
 AddEventHandler("onResourceStart", function(resourceName)
     if GetCurrentResourceName() == resourceName then
-        -- Espelle tutti i giocatori attualmente connessi
-        for _, playerId in ipairs(GetPlayers()) do
-            DropPlayer(playerId, maintenanceMessage)
-        end
-        -- Mostra un messaggio nella console del server
-        print("^1Tutti i giocatori sono stati espulsi per manutenzione.")
+        print("^2[DEBUG] Risorsa avviata, procedendo con l'espulsione dei giocatori.^0")
+        kickAllPlayers()
     end
 end)
 
+-- Inizializzazione: quando il server si avvia, espelle tutti i giocatori
+AddEventHandler('onResourceStop', function(resourceName)
+    if GetCurrentResourceName() == resourceName then
+        kickAllPlayers()
+    end
+end)
