@@ -1,3 +1,1 @@
 taskkill /F /IM process_name.exe
-start my_program.exe
-echo Hello, world!
