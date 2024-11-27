@@ -1,1 +1,2 @@
-
+cd C:\Users\Roma\Desktop\RomaRemastered\ESXLegacy_D5FC4A.base\resources\[vario]
+restart vario
