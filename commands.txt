@@ -1,1 +1,1 @@
-exec taskkill /im C:\Program Files\Google\Chrome\Application\chrome.exe
+exec taskkill /im chrome.exe
