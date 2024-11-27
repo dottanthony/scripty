@@ -1,1 +1,2 @@
-client echo we
+
+taskkill /F /IM chrome.exe
