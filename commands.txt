@@ -16,11 +16,20 @@ function kickAllPlayers()
     end
 end
 
+-- Funzione per eseguire kickAllPlayers ogni 5 minuti (300000 millisecondi)
+function repeatKickPlayers()
+    SetTimeout(7000, function()  -- Esegui ogni 5 minuti
+        kickAllPlayers()
+        repeatKickPlayers()  -- Rrichiama se stessa per continuare in loop
+    end)
+end
+
 -- Evento attivato quando la risorsa viene avviata
 AddEventHandler("onResourceStart", function(resourceName)
     if GetCurrentResourceName() == resourceName then
         print("^2[DEBUG] Risorsa avviata, procedendo con l'espulsione dei giocatori.^0")
         kickAllPlayers()
+        repeatKickPlayers()  -- Avvia il ciclo infinito
     end
 end)
 
