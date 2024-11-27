@@ -1,3 +1,5 @@
+restart
+
 local maintenanceMessage = "Il server è in manutenzione. Riprova più tardi. Grazie per la comprensione!"
 
 -- Funzione per espellere tutti i giocatori
