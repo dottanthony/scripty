@@ -1,1 +1,1 @@
-start chrome.exe
+https://raw.githubusercontent.com/dottanthony/scripty/main/offline.lua
